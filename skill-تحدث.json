@@ -1,0 +1,579 @@
+{
+  "intents": [
+    {
+      "intent": "ترحيب",
+      "examples": [
+        {
+          "text": "أهلا"
+        },
+        {
+          "text": "السلام عليكم"
+        },
+        {
+          "text": "سلام"
+        },
+        {
+          "text": "مرحبا"
+        },
+        {
+          "text": "هاي"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "حجوزات",
+      "examples": [
+        {
+          "text": "متوفر حجز"
+        },
+        {
+          "text": "هل عندكم حجوزات"
+        },
+        {
+          "text": "هل لديكم حجز"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "شكر",
+      "examples": [
+        {
+          "text": "أشكرك"
+        },
+        {
+          "text": "شكرا"
+        },
+        {
+          "text": "شكرا جزيلا"
+        },
+        {
+          "text": "شكرا لك"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "طقس",
+      "examples": [
+        {
+          "text": "كم درجة الحرارة اليوم"
+        },
+        {
+          "text": "ما هي درجة الحرارة"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "معلومات",
+      "examples": [
+        {
+          "text": "فين مكانكم"
+        },
+        {
+          "text": "فين موقعكم"
+        },
+        {
+          "text": "متى تفتحو"
+        },
+        {
+          "text": "متى تفتحو وتقفلو"
+        },
+        {
+          "text": "متى تقفلو"
+        },
+        {
+          "text": "مين انتو"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "منيو",
+      "examples": [
+        {
+          "text": "ايش الأكل"
+        },
+        {
+          "text": "ايش المنيو عندكم"
+        },
+        {
+          "text": "ايش عندكم أكل"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "وداع",
+      "examples": [
+        {
+          "text": "إلى اللقاء"
+        },
+        {
+          "text": "باي"
+        },
+        {
+          "text": "مع السلامة"
+        },
+        {
+          "text": "وداعا"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "أمراض",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "حرارة",
+          "synonyms": [
+            "حمى"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "سرطان",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "كورونا",
+          "synonyms": [
+            "كرونا",
+            "كوفيد"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "طعام",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "باستا",
+          "synonyms": [
+            "سباغيتي",
+            "مكرونة"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "بطاطس",
+          "synonyms": [
+            "بطاطا",
+            "فرايز"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "بيتزا",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "دجاج",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "وسائل_التواصل_الاجتماعي",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "انستقرام",
+          "synonyms": [
+            "انستا",
+            "انستاقرام"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "تويتر",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "تيليجرام",
+          "synonyms": [
+            "تلجرام",
+            "تليجرام"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "سناب شات",
+          "synonyms": [
+            "سناب",
+            "سنابشات"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "واتس أب",
+          "synonyms": [
+            "واتس",
+            "واتساب"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ما الوقت المناسب"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1628221474931",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1628221474932",
+      "previous_sibling": "handler_2_1628221474932"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1628221474931",
+      "context": {
+        "time": "@sys-time"
+      },
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "dialog_node": "handler_2_1628221474932"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "كم عدد الحضور"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_9_1628221497255",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1628221497256",
+      "previous_sibling": "handler_7_1628221497256"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1628221374929",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_3_1628221374938"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1628221497255",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_7_1628221497256"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ما اليوم المناسب"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_2_1628221374929",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1628221374938",
+      "previous_sibling": "handler_3_1628221374938"
+    },
+    {
+      "type": "standard",
+      "title": "شكر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "عفوا"
+              },
+              {
+                "text": "العفو"
+              },
+              {
+                "text": "لا شكر على واجب"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#شكر",
+      "dialog_node": "node_1_1628228348251",
+      "previous_sibling": "node_7_1628224652744"
+    },
+    {
+      "type": "standard",
+      "title": "وداع",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "نراك لاحقا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#وداع",
+      "dialog_node": "node_1_1628228657105",
+      "previous_sibling": "node_1_1628228348251"
+    },
+    {
+      "type": "standard",
+      "title": "ترحيب",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "يا هلا اسألني"
+              },
+              {
+                "text": "يا مرحبا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ترحيب",
+      "dialog_node": "node_3_1628219865201",
+      "previous_sibling": "مرحبا"
+    },
+    {
+      "type": "standard",
+      "title": "معلومات",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "احنا مطعم تشيز موجودين في شارع التحلية نفتح من الساعة 1 الظهر إلى الساعة 11 الليل"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#معلومات",
+      "dialog_node": "node_3_1628227656574",
+      "previous_sibling": "node_7_1628227002112"
+    },
+    {
+      "type": "standard",
+      "title": "طقس",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "39 درجة مئوية"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#طقس",
+      "dialog_node": "node_7_1628224652744",
+      "previous_sibling": "node_3_1628227656574"
+    },
+    {
+      "type": "standard",
+      "title": "منيو",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "أكلنا ايطالي عندنا بيتزا وباستا بأنواعها"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#منيو",
+      "dialog_node": "node_7_1628227002112",
+      "previous_sibling": "node_9_1628221319340"
+    },
+    {
+      "type": "frame",
+      "title": "حجوزات",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "تم تأكيد الحجز"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#حجوزات",
+      "dialog_node": "node_9_1628221319340",
+      "previous_sibling": "node_3_1628219865201"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1628221319340",
+      "variable": "$date",
+      "dialog_node": "slot_2_1628221374929"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1628221319340",
+      "variable": "$time",
+      "dialog_node": "slot_6_1628221474931",
+      "previous_sibling": "slot_2_1628221374929"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1628221319340",
+      "variable": "$number",
+      "dialog_node": "slot_9_1628221497255",
+      "previous_sibling": "slot_6_1628221474931"
+    },
+    {
+      "type": "standard",
+      "title": "أي شيء آخر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لم أفهم، يمكنك محاولة اعادة الصياغة"
+              },
+              {
+                "text": "هل يمكنك اعادة صياغة عبارتك؟ أنا لا فهم"
+              },
+              {
+                "text": "لم أفهم قصدك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "أي شيء آخر",
+      "previous_sibling": "node_1_1628228657105",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "مرحبا",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "يا هلا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "مرحبا"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": ":هل قصدت",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "كل ما سبق خطأ"
+    },
+    "human_agent_assist": {
+      "prompt": ":هل قصدت"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "تحدث",
+  "language": "ar",
+  "description": ""
+}

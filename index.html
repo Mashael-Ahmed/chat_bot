@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <form action="direction.php" method="post">
+            <div>
+                <button name="direction" value="Forward" class="one-button">Forward</button>
+            </div>
+
+            <div>
+                <button name="direction" value="Left">Left</button>
+                <button name="direction" value="Stop">Stop</button>
+                <button name="direction" value="Right">Right</button>
+            </div>
+            <div>
+                <button name="direction" value="Back" class="one-button">Back</button>
+            </div>
+
+        </form>
+    </main>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+        integrationID: "119d7ab2-f111-4179-8d47-6145a196b6d4", // The ID of this integration.
+        region: "eu-de", // The region your integration is hosted in.
+        serviceInstanceID: "8ec60f42-3333-45bb-910d-27d7ece18310", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+        });
+    </script>
+
+</body>
+
+</html>
